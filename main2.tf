@@ -1,14 +1,14 @@
 resource "aws_s3_bucket" "my_project_bucket" {
-    bucket = "i-hope-this-works-454545"
+  bucket = "i-hope-this-works-454545"
 
-    lifecycle {
-      prevent_destroy = true
-    }
+  lifecycle {
+    prevent_destroy = true
+  }
 
-    tags = {
-        Name = "i-hope-this-works-454545"
-        Environment = "Test"
-    }
+  tags = {
+    Name        = "i-hope-this-works-454545"
+    Environment = "Test"
+  }
 }
 
 resource "aws_s3_bucket_versioning" "version_my_bucket" {
@@ -30,7 +30,7 @@ resource "aws_dynamodb_table" "terraform_lock_tbl" {
     type = "S"
   }
 
-  tags           = {
+  tags = {
     Name = "terraform-lock"
   }
 }
